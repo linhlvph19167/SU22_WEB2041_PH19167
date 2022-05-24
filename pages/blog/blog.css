@@ -1,0 +1,34 @@
+/*student*/
+.student {
+    margin-top: var(--section-spacing);
+    text-align: center;
+}
+.student-desc,
+.student-heading {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+.student-heading {
+    max-width: 950px;
+}
+.student-image {
+    margin: 32px 0 48px;
+}
+.student-desc {
+    max-width: 830px;
+}
+.student-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2405f2;
+}
+/* our blog */
+.our-blog {
+    margin: var(--section-spacing) 0px;
+}
+.our-blog-heading {
+    margin-bottom: 48px;
+    text-align: center;
+}

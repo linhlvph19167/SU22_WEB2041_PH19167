@@ -1,0 +1,112 @@
+.header {
+    background-color: #1c1e53;
+}
+/* naivigation */
+.navigation {
+    padding: 16px 0;
+    background-color: #1c1e53;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navigation-container {
+    display: flex;
+    align-items: center;
+}
+.navigation-bar,
+.navigation .contact-us-icon {
+    display: none;
+}
+.navigation-bar > i.fa-bars {
+    transition: all 0.5s ease;
+}
+.navigation-bar > i.fa-times {
+    transition: all 0.5s ease;
+    transform: rotate(180deg);
+}
+/* menu */
+.menu {
+    margin-left: auto;
+    margin-right: 48px;
+}
+.menu-list {
+    display: flex;
+    align-items: center;
+    gap: 0 32px;
+}
+.menu-link {
+    color: #bbbbcb;
+    transition: color 0.2 ease;
+    position: relative;
+}
+.menu-link::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 100rem;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+.menu-link.active,
+.menu-link:hover {
+    color: #ffffff;
+}
+.menu-link.active::before,
+.menu-link:hover::before {
+    width: 100%;
+}
+/* response */
+@media screen and (max-width: 1024px) {
+    .contact-us .button {
+        display: none;
+    }
+    .navigation-container {
+        justify-content: space-between;
+    }
+    .navigation-bar,
+    .navigation .contact-us-icon {
+        display: block;
+        font-size: 30px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .navigation {
+        padding: 24px 0;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        width: 45%;
+        background-color: #ffffff;
+        margin-right: 0;
+        transition: all 0.8s ease;
+    }
+    .menu.show {
+        right: 0;
+    }
+    .menu-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-link {
+        color: #282938;
+        font-weight: 500;
+        display: block;
+        padding: 16px;
+        z-index: 50;
+        font-size: 20px;
+    }
+    .menu-link.active,
+    .menu-link:hover {
+        color: #2405f2;
+    }
+}
